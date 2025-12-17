@@ -1,0 +1,5 @@
+[build]
+  bin = "./bin/dev"
+  cmd = "go build -o bin/dev cmd/run.go"
+  include_ext = ["go"]
+  exclude_regex = ["_test.go"]

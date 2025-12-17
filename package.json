@@ -1,0 +1,23 @@
+{
+  "name": "project-banana",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "eslint": "^9.33.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.39.1",
+    "vite": "^7.1.2"
+  },
+  "dependencies": {
+    "@bufbuild/protobuf": "^2.6.3",
+    "@connectrpc/connect": "^2.0.4",
+    "@connectrpc/connect-web": "^2.0.4"
+  }
+}

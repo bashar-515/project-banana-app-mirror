@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Banana App</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="homeView">
+      <button id="createButton">create</button>
+      <a href="https://www.project-banana.com">site</a>
+      <p>or</p>
+      <input id="roomIdInput" type="text"/>
+      <button id="joinButton">join</button>
+    </div>
+
+    <div id="roomView">
+      <div class="room-view-inner-container">
+        <header>
+          <button id="leaveButton">leave</button>
+        </header>
+
+        <div class="video-container">
+          <video id="remoteVideo" autoplay></video>
+          <video id="localVideo" autoplay></video>
+        </div>
+
+        <footer>
+          <p>room ID:&nbsp;</p>
+          <p id="roomIdParagraph"></p>
+        </footer>
+      </div>
+    </div>
+
+    <script type="module" src="script.ts"></script>
+  </body>
+</html>

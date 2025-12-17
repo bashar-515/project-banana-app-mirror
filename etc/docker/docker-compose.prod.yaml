@@ -1,0 +1,8 @@
+services:
+  pb-server:
+    restart: unless-stopped
+
+networks:
+  pb-net:
+    external: true
+    name: pi-network

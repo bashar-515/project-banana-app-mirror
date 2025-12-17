@@ -1,0 +1,15 @@
+# directories
+/bin/
+
+/dist/
+
+/gen/
+
+/node_modules/
+
+/site/
+
+/tmp/
+
+# files
+/.env

@@ -1,0 +1,57 @@
+#homeView,
+#roomView {
+  display: none;
+}
+
+a {
+  float: right;
+}
+
+a:hover {
+  background-color: yellow;
+}
+
+#remoteVideo {
+  transform: scaleX(-1);
+}
+
+#localVideo {
+  transform: scaleX(-1);
+}
+
+#roomIdParagraph:hover {
+  color: gray;
+}
+
+body {
+  margin: 0;
+}
+
+video {
+  background-color: black;
+  flex: 1;
+  min-width: 0;
+  max-width: 50vw;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+}
+
+.room-view-inner-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}

@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+package app.v1;
+
+service AppService {
+  rpc CreateRoom(CreateRoomRequest) returns (CreateRoomResponse);
+  rpc JoinRoom(JoinRoomRequest) returns (JoinRoomResponse);
+  rpc UploadIceCandidate(UploadIceCandidateRequest) returns (UploadIceCandidateResponse);
+  rpc UploadSessionDescription(UploadSessionDescriptionRequest) returns (UploadSessionDescriptionResponse);
+}
+
+message CreateRoomRequest {}
+
+message CreateRoomResponse {
+  string room_id = 1;
+}
+
+message JoinRoomRequest {
+  string room_id = 1;
+}
+
+message JoinRoomResponse {
+  string peer_id = 1;
+}
+
+message UploadIceCandidateRequest {
+  string room_id = 1;
+  string peer_id = 2;
+  IceCandidate ice_candidate = 3;
+}
+
+message UploadIceCandidateResponse {}
+
+message IceCandidate {
+  optional string candidate = 1;
+  optional int32 sdp_m_line_index = 2;
+  optional string sdp_mid = 3;
+  optional string username_fragment = 4;
+}
+
+message UploadSessionDescriptionRequest {
+  string room_id = 1;
+  string peer_id = 2;
+  SessionDescription session_description = 3;
+}
+
+message UploadSessionDescriptionResponse {}
+
+message SessionDescription {
+  optional string sdp = 1;
+  Type type = 2;
+}
+
+enum Type {
+  TYPE_UNSPECIFIED = 0;
+  TYPE_ANSWER = 1;
+  TYPE_OFFER = 2;
+  TYPE_PRANSWER = 3;
+  TYPE_ROLLBACK = 4;
+}
